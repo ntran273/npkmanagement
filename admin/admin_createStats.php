@@ -3,7 +3,7 @@
   {
     session_start();
   }
-    require_once('db.php');
+    require_once('../db.php');
     require_once('Address.php');
     require_once('PlayerStatistic.php');
 
@@ -12,7 +12,7 @@
     //Check if user is logged in using the session variable
     if($_SESSION['logged_in'] != 1){
       $_SESSION['message'] = "You must log in to see your profile page!";
-      header("location: error.php");
+      header("location: ../error.php");
     }
     else{
       $first_name = $_SESSION['first_name'];
@@ -24,7 +24,7 @@
 
     if($type != '2'){
         session_destroy();
-        header("location: index.php");
+        header("location: ../index.php");
      }
     // Connect to database
     /* Attempt to connect to MySQL database */
@@ -46,7 +46,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
   <body>
-    <?php include 'partials/navbaradmin.php'; ?>
+    <?php include '../partials/navbaradmin.php'; ?>
 
 
     <section id="body">
@@ -166,8 +166,8 @@
         </div>
 
           <?php
-           include 'viewgames.php';
-           include 'viewstats.php';
+           include '../viewgames.php';
+           include '../viewstats.php';
           ?>
 
         </body>

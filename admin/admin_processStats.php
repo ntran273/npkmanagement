@@ -31,7 +31,7 @@ $minutes = null;
 $seconds = null;
 }
 
-require_once('db.php');
+require_once( '../db.php' );
 $mysqli = new mysqli(DATA_BASE_HOST, USER_NAME, USER_PASSWORD, DATA_BASE_NAME);
 
 //Check if the stats for the player and the game is already placed or not

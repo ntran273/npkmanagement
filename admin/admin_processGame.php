@@ -11,7 +11,7 @@
         if( empty($StartDate) ) $StartDate = null;
         if( empty($TimeSchedule)  ) $TimeSchedule  = null;
 
-        require_once( 'db.php' );
+        require_once( '../db.php' );
         $mysqli = new mysqli(DATA_BASE_HOST, USER_NAME, USER_PASSWORD, DATA_BASE_NAME);
 
         //Check if the date, the time, the home teame or away team is already placed

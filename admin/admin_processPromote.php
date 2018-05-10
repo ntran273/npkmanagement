@@ -4,7 +4,7 @@ $type       = (int) $_POST['type'];
 
 if( ! empty($ID ))
 {
-  require_once('db.php');
+  require_once( '../db.php' );
   $mysqli = new mysqli(DATA_BASE_HOST, USER_NAME, USER_PASSWORD, DATA_BASE_NAME);
   // Check connection
   if($mysqli === false){

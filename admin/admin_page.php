@@ -6,7 +6,7 @@ session_start();
 //Check if user is logged in using the session variable
 if($_SESSION['logged_in'] != 1){
   $_SESSION['message'] = "You must log in to see this page!";
-  header("location: error.php");
+  header("location: ../error.php");
 }
 else{
   $first_name = $_SESSION['first_name'];
@@ -18,7 +18,7 @@ else{
 
 if($type != '2'){
     session_destroy();
-    header("location: index.php");
+    header("location: ../index.php");
  }
 
 ?>
@@ -33,7 +33,7 @@ if($type != '2'){
 
 <body>
   <?php
-      include 'partials/navbaradmin.php';
+      include '../partials/navbaradmin.php';
    ?>
 
   <div class="jumbotron">

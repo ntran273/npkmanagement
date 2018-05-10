@@ -4,7 +4,7 @@ $teamName = trim(preg_replace("/\t|\R/",' ',$_POST['teamName']));
 $error = '';
 
 if(!empty($teamName)){
-  require_once('db.php');
+  require_once( '../db.php' );
   $mysqli = new mysqli(DATA_BASE_HOST, USER_NAME, USER_PASSWORD, DATA_BASE_NAME);
   if($mysqli === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());

@@ -5,7 +5,7 @@ session_start();
 //Check if user is logged in using the session variable
 if($_SESSION['logged_in'] != 1){
   $_SESSION['message'] = "You must log in to see your profile page!";
-  header("location: error.php");
+  header("location: ../error.php");
 }
 else{
   $first_name = $_SESSION['first_name'];
@@ -17,7 +17,7 @@ else{
 
 if($type != '2'){
     session_destroy();
-    header("location: index.php");
+    header("location: ../index.php");
  }
 
 ?>
@@ -31,14 +31,14 @@ if($type != '2'){
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
   <body>
-    <?php include 'partials/navbaradmin.php'; ?>
+    <?php include '../partials/navbaradmin.php'; ?>
 
       <!-- ========================================================================== -->
 <!-- ============================CREATE GAMES=================================== -->
 <!-- ==================================================================================== -->
 
 <?php
-require_once('db.php');
+require_once( '../db.php' );
 // Connect to database
 /* Attempt to connect to MySQL database */
 $mysqli = new mysqli(DATA_BASE_HOST, USER_NAME, USER_PASSWORD, DATA_BASE_NAME);
@@ -89,8 +89,6 @@ if ($stmt3 = $mysqli->prepare($query3)) {
                     <option value="" selected disabled hidden>Choose Team</option>
                   <?php
                     $stmt3->data_seek(0);
-                    //testing
-                    $rowgroupcheck = array();
                     while( $stmt3->fetch() )
                     {
                       echo '<option '.$ti2.' value="'.$ti2.'">'.$teamNAME2.'</option>';
@@ -125,7 +123,7 @@ if ($stmt3 = $mysqli->prepare($query3)) {
           <!-- ========================================================================== -->
     <!-- ============================VIEW GAMES=================================== -->
     <!-- ==================================================================================== -->
-          <?php include 'viewgames.php'; ?>
+          <?php include '../viewgames.php'; ?>
 
 
         </div>

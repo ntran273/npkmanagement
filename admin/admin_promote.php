@@ -5,7 +5,7 @@ session_start();
 //Check if user is logged in using the session variable
 if($_SESSION['logged_in'] != 1){
   $_SESSION['message'] = "You must log in to see this page!";
-  header("location: error.php");
+  header("location: ../error.php");
 }
 else{
   $first_name = $_SESSION['first_name'];
@@ -18,10 +18,10 @@ else{
 if($type != '2'){
   $_SESSION['message'] = "You are not allowed to see this page";
   session_destroy();
-  header("location: index.php");
+  header("location: ../index.php");
 }
 
-require_once('db.php');
+require_once( '../db.php' );
 // Connect to database
 /* Attempt to connect to MySQL database */
 $mysqli = new mysqli(DATA_BASE_HOST, USER_NAME, USER_PASSWORD, DATA_BASE_NAME);
@@ -54,7 +54,7 @@ if ($stmt = $mysqli->prepare($query)) {
 </head>
 
 <body>
-   <?php include 'partials/navbaradmin.php' ?>
+   <?php include '../partials/navbaradmin.php' ?>
 
     <!-- ========================================================================== -->
     <!-- ============================PROMOTE ACCOUNT =================================== -->

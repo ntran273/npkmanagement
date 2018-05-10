@@ -16,7 +16,7 @@ else{
 
 if($type != '2'){
     session_destroy();
-    header("location: index.php");
+    header("location: ../index.php");
  }
 
 ?>
@@ -28,7 +28,7 @@ if($type != '2'){
 </head>
 
 <body>
-  <?php include 'partials/navbaradmin.php'; ?>
+  <?php include '../partials/navbaradmin.php'; ?>
 
   <section id="body">
       <div class="container">
@@ -52,7 +52,7 @@ if($type != '2'){
         </form>
 
         <!-- Call View Team -->
-        <?php include 'viewteams.php'; ?>
+        <?php include '../viewteams.php'; ?>
 
 
       </body>
