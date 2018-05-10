@@ -4,10 +4,8 @@ if(!isset($_SESSION))
   session_start();
 }
   require_once('db.php');
-
-
-  require_once('Address.php');
-  require_once('PlayerStatistic.php');
+  require_once('admin/Address.php');
+  require_once('admin/PlayerStatistic.php');
 
 
   /*Displayer user information*/

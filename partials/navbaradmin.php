@@ -14,7 +14,7 @@ if(substr($path,$position) == "admin"){
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="admin_page.php">Home </a>
+        <a class="nav-link" href="index.php">Home </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="admin_promote.php">Promote</a>
@@ -46,7 +46,7 @@ if(substr($path,$position) == "admin"){
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="admin/admin_page.php">Home </a>
+        <a class="nav-link" href="admin/index.php">Home </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="admin/admin_promote.php">Promote</a>

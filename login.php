@@ -23,11 +23,11 @@
       $_SESSION['logged_in'] = true;
 
       if($_SESSION['type'] == '0'){
-        header("location: observer_page.php");
+        header("location: observer/index.php");
       }else if ($_SESSION['type'] == '1'){
-        header("location: director_page.php");
+        header("location: director/index.php");
       }else{
-        header("location: admin_page.php");
+        header("location: admin/index.php");
       }
 
     }
