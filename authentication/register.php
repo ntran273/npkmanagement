@@ -11,7 +11,7 @@ $email = trim(preg_replace("/\t|\R/",' ', $_POST['email']));
 $password = trim(preg_replace("/\t|\R/",' ', password_hash($_POST['password'], PASSWORD_BCRYPT)));
 $hash = trim(preg_replace("/\t|\R/",' ', md5(rand(0,1000))));
 
-require_once('db.php');
+require_once(__DIR__.'/../db.php');
 $mysqli = new mysqli(DATA_BASE_HOST, USER_NAME, USER_PASSWORD, DATA_BASE_NAME);
 
 
@@ -20,7 +20,7 @@ $result = $mysqli->query("SELECT * FROM ACCOUNT
 
 if ($result->num_rows>0) {
   $_SESSION['message'] = 'User with this email already exists!';
-  header("location: error.php");
+  header("location: ../error.php");
 
 }else{
   $query = "INSERT INTO ACCOUNT(first_name, last_name, email, password, hash) "

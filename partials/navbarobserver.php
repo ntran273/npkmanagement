@@ -5,7 +5,7 @@
 $path = dirname($_SERVER['PHP_SELF']);
 $position = strrpos($path,'/') + 1;
 //If parent directory is admin
-if(substr($path,$position) == "director"){
+if(substr($path,$position) == "observer"){
   echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">MENU</a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,16 +17,16 @@ if(substr($path,$position) == "director"){
                 <a class="nav-link" href="index.php">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="viewgames.php">Schedule</a>
+                <a class="nav-link" href="../features/viewgames.php">Schedule</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="viewstats.php">Stats</a>
+                <a class="nav-link" href="../features/viewstats.php">Stats</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="viewteams.php">Teams</a>
+                <a class="nav-link" href="../features/viewteams.php">Teams</a>
               </li>
               <li id="logout"class="nav-item active">
-                <a class="nav-link" href="../logout.php">SIGN OUT</a>
+                <a class="nav-link" href="../authentication/logout.php">SIGN OUT</a>
               </li>
             </ul>
           </div>
@@ -41,7 +41,7 @@ if(substr($path,$position) == "director"){
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="observer/index.php">Home</a>
+                <a class="nav-link" href="../observer/index.php">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="viewgames.php">Schedule</a>
@@ -53,7 +53,7 @@ if(substr($path,$position) == "director"){
                 <a class="nav-link" href="viewteams.php">Teams</a>
               </li>
               <li id="logout"class="nav-item active">
-                <a class="nav-link" href="logout.php">SIGN OUT</a>
+                <a class="nav-link" href="../authentication/logout.php">SIGN OUT</a>
               </li>
             </ul>
           </div>

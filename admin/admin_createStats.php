@@ -166,8 +166,8 @@
         </div>
 
           <?php
-           include '../viewgames.php';
-           include '../viewstats.php';
+           include '../features/viewgames.php';
+           include '../features/viewstats.php';
           ?>
 
         </body>

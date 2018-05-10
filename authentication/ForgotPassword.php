@@ -3,7 +3,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
   session_start();
 
-  require_once('db.php');
+  require_once(__DIR__.'/../db.php');
   $mysqli = new mysqli(DATA_BASE_HOST, USER_NAME, USER_PASSWORD, DATA_BASE_NAME);
 
   if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -13,7 +13,7 @@ use PHPMailer\PHPMailer\Exception;
     if($result->num_rows == 0) // User doesn't exist
     {
       $_SESSION['message'] = "User with that email doesn't exist";
-      header("location: error.php");
+      header("location: ../error.php");
     }
     else{
       $user = $result->fetch_assoc(); //get user data
@@ -28,7 +28,7 @@ use PHPMailer\PHPMailer\Exception;
       ."for a confirmation link to complete your password reset</p>";
 
       //Load Composer's autoloader
-      require 'vendor/autoload.php';
+      require_once(__DIR__.'/../vendor/autoload.php');
 
       $mail = new PHPMailer();
       $mail->CharSet =  "utf-8";
@@ -48,7 +48,7 @@ use PHPMailer\PHPMailer\Exception;
 
       $mail->Subject = "Password Reset - NPK Basketball Team Management";
       $mail->Body = "Please click the link to reset your account:
-      http://localhost/csufbasketballteam/reset.php?email=$email&hash=$hash";
+      http://localhost/npkmanagement/authentication/reset.php?email=$email&hash=$hash";
       $mail->ContentType = "text/html";
 
       if($mail->Send()){
@@ -58,7 +58,7 @@ use PHPMailer\PHPMailer\Exception;
       }
 
 
-        header("location: success.php");
+        header("location: ../success.php");
     }
   }
 
@@ -68,7 +68,10 @@ use PHPMailer\PHPMailer\Exception;
 <html>
 <head>
   <title>Reset Your Password</title>
-  <?php include 'css/css.html'; ?>
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+
 </head>
 
 <body>
@@ -89,7 +92,7 @@ use PHPMailer\PHPMailer\Exception;
   </div>
 
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="js/index.js"></script>
+<script src="../js/index.js"></script>
 </body>
 
 </html>

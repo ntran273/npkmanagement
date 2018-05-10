@@ -8,7 +8,7 @@ if(!isset($_SESSION))
 //Check if user is logged in using the session variable
 if($_SESSION['logged_in'] != 1){
   $_SESSION['message'] = "You must log in to see this page!";
-  header("location: error.php");
+  header("location: ../error.php");
 }
 else{
   $first_name = $_SESSION['first_name'];
@@ -20,7 +20,7 @@ else{
 
 if($type == '0' ){
     session_destroy();
-    header("location: index.php");
+    header("location: ../index.php");
  }
 
 ?>
@@ -35,16 +35,16 @@ if($type == '0' ){
 <body>
   <?php
     if($type == "1"){
-      include 'partials/navbardirector.php';
+      include '../partials/navbardirector.php';
     }else if($type == "2"){
-      include 'partials/navbaradmin.php';
+      include '../partials/navbaradmin.php';
     }
 
    ?>
 
 
   <?php
-  require_once('db.php');
+  require_once(__DIR__.'/../db.php');
   // Connect to database
   /* Attempt to connect to MySQL database */
   $mysqli = new mysqli(DATA_BASE_HOST, USER_NAME, USER_PASSWORD, DATA_BASE_NAME);
@@ -143,7 +143,7 @@ if($type == '0' ){
         <form action="viewplayersbyteam.php" align="center" method="post">
         <h1>View Players</h1>
                 <?php
-                  require_once('db.php');
+                require_once(__DIR__.'/../db.php');
                   // Connect to database
                   /* Attempt to connect to MySQL database */
                   $mysqli = new mysqli(DATA_BASE_HOST, USER_NAME, USER_PASSWORD, DATA_BASE_NAME);

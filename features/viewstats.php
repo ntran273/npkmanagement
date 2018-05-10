@@ -3,10 +3,9 @@ if(!isset($_SESSION))
 {
   session_start();
 }
-  require_once('db.php');
-  require_once('admin/Address.php');
-  require_once('admin/PlayerStatistic.php');
-
+  require_once(__DIR__.'/../db.php');
+  require_once(__DIR__.'/../admin/Address.php');
+  require_once(__DIR__.'/../admin/PlayerStatistic.php');
 
   /*Displayer user information*/
   //Check if user is logged in using the session variable
@@ -59,15 +58,15 @@ if(!isset($_SESSION))
   <head>
     <meta charset="utf-8">
     <title>View Stats</title>
-    <link rel="stylesheet" href="css/theme.css" type="text/css"> </head>
+    <link rel="stylesheet" href="../css/theme.css" type="text/css"> </head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
   <body>
     <?php
       if($type == "0"){
-        include 'partials/navbarobserver.php';
+        include '../partials/navbarobserver.php';
       }else if ($type == "1"){
-        include 'partials/navbardirector.php';
+        include '../partials/navbardirector.php';
       }
        ?>
 

@@ -1,6 +1,6 @@
 <?php
 
-    require_once('db.php');
+    require_once(__DIR__.'/../db.php');
 
     $selectOption = (string) $_POST['teamname'];
 
@@ -52,7 +52,7 @@
 
     if($type == '0'){
         session_destroy();
-        header("location: index.php");
+        header("location: ../index.php");
      }
 
 ?>

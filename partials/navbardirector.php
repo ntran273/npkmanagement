@@ -17,19 +17,19 @@ if(substr($path,$position) == "director"){
           <a class="nav-link" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../viewplayers.php">Players</a>
+          <a class="nav-link" href="../features/viewplayers.php">Players</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../viewgames.php">Schedule</a>
+          <a class="nav-link" href="../features/viewgames.php">Schedule</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../viewstats.php">Stats</a>
+          <a class="nav-link" href="../features/viewstats.php">Stats</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../viewteams.php">Teams</a>
+          <a class="nav-link" href="../features/viewteams.php">Teams</a>
         </li>
         <li id="logout"class="nav-item active">
-          <a class="nav-link" href="../logout.php">SIGN OUT</a>
+          <a class="nav-link" href="../authentication/logout.php">SIGN OUT</a>
         </li>
       </ul>
     </div>
@@ -44,7 +44,7 @@ if(substr($path,$position) == "director"){
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="director/index.php">Home</a>
+          <a class="nav-link" href="../director/index.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="viewplayers.php">Players</a>
@@ -59,7 +59,7 @@ if(substr($path,$position) == "director"){
           <a class="nav-link" href="viewteams.php">Teams</a>
         </li>
         <li id="logout"class="nav-item active">
-          <a class="nav-link" href="logout.php">SIGN OUT</a>
+          <a class="nav-link" href="../authentication/logout.php">SIGN OUT</a>
         </li>
       </ul>
     </div>

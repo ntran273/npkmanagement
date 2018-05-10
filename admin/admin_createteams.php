@@ -52,7 +52,7 @@ if($type != '2'){
         </form>
 
         <!-- Call View Team -->
-        <?php include '../viewteams.php'; ?>
+        <?php include '../features/viewteams.php'; ?>
 
 
       </body>

@@ -21,7 +21,7 @@
 
         if( ! empty($lastName) ) // Verify required fields are present
         {
-          require_once( 'db.php' );
+          require_once( '../db.php' );
           $mysqli = new mysqli(DATA_BASE_HOST, USER_NAME, USER_PASSWORD, DATA_BASE_NAME);
 
           if( mysqli_connect_error() == 0 )  // Connection succeeded

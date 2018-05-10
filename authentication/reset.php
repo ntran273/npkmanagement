@@ -3,7 +3,7 @@
    from the forgot.php email message
 */
 session_start();
-require('db.php');
+require_once(__DIR__.'/../db.php');
 $mysqli = new mysqli(DATA_BASE_HOST, USER_NAME, USER_PASSWORD, DATA_BASE_NAME);
 // Check email and hash variables aren't empty
 if( isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && !empty($_GET['hash']) )
@@ -17,12 +17,12 @@ if( isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && 
     if ( $result->num_rows == 0 )
     {
         $_SESSION['message'] = "You have entered invalid URL for password reset!";
-        header("location: error.php");
+        header("location: ../error.php");
     }
 }
 else {
     $_SESSION['message'] = "Sorry, verification failed, try again!";
-    header("location: error.php");
+    header("location: ../error.php");
 }
 ?>
 <!DOCTYPE html>
@@ -30,8 +30,9 @@ else {
 <head>
   <meta charset="UTF-8">
   <title>Reset Your Password</title>
-  <?php include 'css/css.html'; ?>
-</head>
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="../css/style.css"></head>
 
 <body>
     <div class="form">
@@ -64,7 +65,7 @@ else {
 
     </div>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="js/index.js"></script>
+<script src="../js/index.js"></script>
 
 </body>
 </html>

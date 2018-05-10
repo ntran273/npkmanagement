@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Make sure the two passwords match
     if ( $_POST['new_password'] == $_POST['confirm_password'] ) {
-        require_once('db.php');
+        require_once(__DIR__.'/../db.php');
         $mysqli = new mysqli(DATA_BASE_HOST, USER_NAME, USER_PASSWORD, DATA_BASE_NAME);
         $new_password = password_hash($_POST['new_password'], PASSWORD_BCRYPT);
 
@@ -20,13 +20,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ( $mysqli->query($sql) ) {
 
         $_SESSION['message'] = "Your password has been reset successfully!";
-        header("location: success.php");
+        header("location: ../success.php");
 
         }
     }
     else {
         $_SESSION['message'] = "Two passwords you entered don't match, try again!";
-        header("location: error.php");
+        header("location: ../error.php");
     }
 
 }

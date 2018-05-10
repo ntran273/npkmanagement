@@ -26,13 +26,13 @@ if(substr($path,$position) == "admin"){
         <a class="nav-link" href="admin_createStats.php">Stats</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../viewplayers.php">Players</a>
+        <a class="nav-link" href="../features/viewplayers.php">Players</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="admin_createteams.php">Teams</a>
       </li>
       <li id="logout"class="nav-item active">
-        <a class="nav-link" href="../logout.php">SIGN OUT</a>
+        <a class="nav-link" href="../authentication/logout.php">SIGN OUT</a>
       </li>
     </ul>
   </div>
@@ -46,25 +46,25 @@ if(substr($path,$position) == "admin"){
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="admin/index.php">Home </a>
+        <a class="nav-link" href="../admin/index.php">Home </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="admin/admin_promote.php">Promote</a>
+        <a class="nav-link" href="../admin/admin_promote.php">Promote</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="admin/admin_creategames.php">Schedule</a>
+        <a class="nav-link" href="../admin/admin_creategames.php">Schedule</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="admin/admin_createStats.php">Stats</a>
+        <a class="nav-link" href="../admin/admin_createStats.php">Stats</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="viewplayers.php">Players</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="admin/admin_createteams.php">Teams</a>
+        <a class="nav-link" href="../admin/admin_createteams.php">Teams</a>
       </li>
       <li id="logout"class="nav-item active">
-        <a class="nav-link" href="logout.php">SIGN OUT</a>
+        <a class="nav-link" href="../authentication/logout.php">SIGN OUT</a>
       </li>
     </ul>
   </div>

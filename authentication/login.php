@@ -1,6 +1,6 @@
 <?php
 
-  require_once('db.php');
+  require_once(__DIR__.'/../db.php');
   $mysqli = new mysqli(DATA_BASE_HOST, USER_NAME, USER_PASSWORD, DATA_BASE_NAME);
 
   $email = trim(preg_replace("/\t|\R/",' ', $_POST['email']));
@@ -33,7 +33,7 @@
     }
     else{
       $_SESSION['message'] = "You have entered wrong password, try again!";
-      header("location: error.php");
+      header("location: ../error.php");
     }
 
   }
