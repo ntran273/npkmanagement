@@ -35,7 +35,7 @@ You will need the following things properly installed on your computer.
 * [Google Chrome](https://git-scm.com/)
 
 ## Installation
-* `git clone https://github.com/Christian-Medina/CPSC-473-Project-2.git`
+* `git clone https://github.com/ntran273/npkmanagement.git`
 * `Run XAMPP - Apache, PHP`
 * `Go to folder htdocs in XAMPP and put all files into there`
 * `Visit Link: http://localhost/phpmyadmin to import basketbal.sql` 
