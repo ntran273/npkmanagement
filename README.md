@@ -60,6 +60,10 @@ You will need the following things properly installed on your computer.
 
 ![stats](screenshots/stats.png)
 
+### features/viewplayer.php
+
+![player](screenshots/player.png)
+
 ### admin/createteam.php
 
 ![team](screenshots/team.png)
