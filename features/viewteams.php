@@ -11,15 +11,14 @@ if($_SESSION['logged_in'] != 1){
   header("location: ../error.php");
 }
 else{
-  $first_name = $_SESSION['first_name'];
-  $last_name = $_SESSION['last_name'];
   $email = $_SESSION['email'];
   $type = $_SESSION['type'];
 
 }
 
 ?>
-
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
   <title align="center">Teams In League</title>
@@ -88,3 +87,4 @@ else{
       </div>
   </section>
 </body>
+</html>

@@ -44,7 +44,7 @@ if($type != '1'){
     <hr class="my-4">
     <p>You are a director. You can add players to team, view players in each team, view stats, and view teams in leagueYou are a director. You can add players to team, view players in each team, view stats, and view teams in league</p>
     <p class="lead">
-      <a class="btn btn-primary btn-lg" href="../viewplayers.php" role="button">ADD PLAYERS</a>
+      <a class="btn btn-primary btn-lg" href="../features/viewplayers.php" role="button">ADD PLAYERS</a>
     </p>
   </div>
 

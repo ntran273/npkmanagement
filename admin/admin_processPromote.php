@@ -1,8 +1,8 @@
 <?php
-$ID       = (int) $_POST['user_id'];
+$Id       = (int) $_POST['user_id'];
 $type       = (int) $_POST['type'];
 
-if( ! empty($ID ))
+if( ! empty($Id ))
 {
   require_once( '../db.php' );
   $mysqli = new mysqli(DATA_BASE_HOST, USER_NAME, USER_PASSWORD, DATA_BASE_NAME);
@@ -13,7 +13,7 @@ if( ! empty($ID ))
   $query ="UPDATE ACCOUNT
          SET ACCOUNT.TYPE = ?
          WHERE
-         ACCOUNT.USER_ID  = '$ID'
+         ACCOUNT.USER_ID  = '$Id'
           ";
     $stmt = $mysqli->prepare($query);
     $stmt->bind_param('d', $type);

@@ -8,8 +8,6 @@ if($_SESSION['logged_in'] != 1){
   header("location: ../error.php");
 }
 else{
-  $first_name = $_SESSION['first_name'];
-  $last_name = $_SESSION['last_name'];
   $email = $_SESSION['email'];
   $type = $_SESSION['type'];
 
@@ -54,7 +52,7 @@ if ($stmt3 = $mysqli->prepare($query3)) {
   $stmt3->execute();
   $stmt3->store_result();
   $stmt3->bind_result(
-    $ti2,
+    $teamId,
     $teamNAME2
   );
 }
@@ -76,11 +74,9 @@ if ($stmt3 = $mysqli->prepare($query3)) {
                     <option value="" selected disabled hidden>Choose Team</option>
                   <?php
                     $stmt3->data_seek(0);
-                    //testing
-                    $rowgroupcheck = array();
                     while( $stmt3->fetch() )
                     {
-                      echo '<option '.$ti2.' value="'.$ti2.'">'.$teamNAME2.'</option>';
+                      echo '<option '.$teamId.' value="'.$teamId.'">'.$teamNAME2.'</option>';
                     }
                   ?>
               </select>
@@ -91,7 +87,7 @@ if ($stmt3 = $mysqli->prepare($query3)) {
                     $stmt3->data_seek(0);
                     while( $stmt3->fetch() )
                     {
-                      echo '<option '.$ti2.' value="'.$ti2.'">'.$teamNAME2.'</option>';
+                      echo '<option '.$teamId.' value="'.$teamId.'">'.$teamNAME2.'</option>';
                     }
                     $stmt3->free_result();
                     $mysqli->close();

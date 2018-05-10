@@ -41,7 +41,7 @@ use PHPMailer\PHPMailer\Exception;
       $mail->Host = "smtp.gmail.com"; // SMTP
       $mail->Port = "587"; // TCP port to connect to
 
-      $mail->setFrom('zindara2412@gmail.com', 'NPK Basketball Team Management');
+      $mail->setFrom('npkteam714@gmail.com', 'NPK Basketball Team Management');
       $mail->AddAddress("$email" , "Recipient name"); // Add a recipient
 
       $mail->addAttachment('path/file.png');         // Add attachments

@@ -33,7 +33,7 @@
     }
     else{
       $_SESSION['message'] = "You have entered wrong password, try again!";
-      header("location: ../error.php");
+      header("location: error.php");
     }
 
   }
