@@ -39,7 +39,7 @@ if($type != '0'){
     <hr class="my-4">
     <p>You are an observer. You can view stats, and view teams, view games</p>
     <p class="lead">
-      <a class="btn btn-primary btn-lg" href="../viewgames.php" role="button">View Games</a>
+      <a class="btn btn-primary btn-lg" href="../features/viewgames.php" role="button">View Games</a>
     </p>
   </div>
 
