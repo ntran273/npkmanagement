@@ -62,7 +62,7 @@ You will need the following things properly installed on your computer.
 
 ### features/viewplayer.php
 
-![player](screenshots/player.png)
+![player](screenshots/players.png)
 
 ### admin/createteam.php
 
