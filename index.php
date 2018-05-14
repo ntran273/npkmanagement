@@ -16,7 +16,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     if (isset($_POST['login'])) { //user logging in
 
-        require 'authentication/login.php';
+        require 'login.php';
+    }
+
+    elseif (isset($_POST['register'])) { //user registering
+
+        require 'register.php';
+
     }
 }
 ?>
@@ -59,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             <input type="password" required autocomplete="off" name="password"/>
           </div>
 
-          <p class="forgot"><a href="authentication/ForgotPassword.php">Forgot Password?</a></p>
+          <p class="forgot"><a href="ForgotPassword.php">Forgot Password?</a></p>
 
           <button class="button button-block" name="login" />Log In</button>
 
@@ -104,7 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             and lowercase letter, and at least 8 or more characters" required autocomplete="off" name='password'/>
           </div>
 
-          <button type="submit" class="button button-block" action="authentication/register.php" name="register" />Register</button>
+          <button type="submit" class="button button-block" name="register" />Register</button>
 
           </form>
 
